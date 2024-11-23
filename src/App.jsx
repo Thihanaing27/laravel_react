@@ -26,6 +26,7 @@ import AdminLayout from "./components/admin/AdminLayout";
 import ManageCategories from "./components/admin/ManageCategories";
 import VendorLayout from "./components/vendor/VendorLayout";
 import Settings from "./components/vendor/Settings";
+import Show from "./components/vendor/Show";
 
 export default function App() {
   const { user, logout, role } = useAppProvider();
@@ -67,8 +68,6 @@ export default function App() {
                       </li>
                     </>
                   )}
-
-                 
 
                   <li className="hover:text-slate-100 hover:scale-110 hover:bg-slate-500 px-1 py-2 rounded-md">
                     {role == "customer" ? (
@@ -130,6 +129,7 @@ export default function App() {
             <Route path="/vendor" element={<VendorLayout />}>
               <Route index element={<VendorDashboard />} />
               <Route path="products" element={<Products />} />
+              <Route path="show/:id" element={<Show />} />
               <Route path="add-product" element={<AddProduct />} />
               <Route path="orders" element={<VendorOrders />} />
               <Route path="settings" element={<Settings />} />

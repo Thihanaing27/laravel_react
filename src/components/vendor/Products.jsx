@@ -51,6 +51,11 @@ const Products = () => {
                 <div>
                   <p>Price - 12000</p>
                 </div>
+                <Link to={`/vendor/show/${product.id}`}>
+                  <button className="bg-blue-500 px-2 py-1 text-white rounded-lg text-end float-end">
+                    Read More...
+                  </button>
+                </Link>
               </div>
             );
           })}
